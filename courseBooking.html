@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Studio - Kursbuchung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Studio - Kursbuchung</h1>
+    </header>
+
+    <main>
+        <section id="courses">
+            <h2>Unsere Kurse</h2>
+            <div class="course">
+                <h3>Zumba</h3>
+                <p>Jeden Dienstag und Donnerstag<br> Uhrzeit: 18:00 - 19:00</p>
+                <button onclick="bookCourse('Zumba')">Buchen</button>
+            </div>
+            <div class="course">
+                <h3>HIIT</h3>
+                <p>Jeden Montag und Mittwoch<br> Uhrzeit: 19:30 - 20:15</p>
+                <button onclick="bookCourse('HIIT')">Buchen</button>
+            </div>
+            <div class="course">
+                <h3>Reha-Kurs</h3>
+                <p>Nur Freitags<br> Uhrzeit: 17:00 - 18:00</p>
+                <button onclick="bookCourse('Reha-Kurs')">Buchen</button>
+            </div>
+            <div class="course">
+                <h3>Rückenkurs</h3>
+                <p>Jeden Dienstag und Donnerstag<br> Uhrzeit: 16:00 - 17:00</p>
+                <button onclick="bookCourse('Rückenkurs')">Buchen</button>
+            </div>
+            <div class="course">
+                <h3>Fitness für Einsteiger</h3>
+                <p>Jeden Montag<br> Uhrzeit: 15:00 - 16:00</p>
+                <button onclick="bookCourse('Fitness für Einsteiger')">Buchen</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fitness Studio</p>
+    </footer>
+
+    <script>
+        function bookCourse(courseName) {
+            const userName = prompt(`Bitte gib deinen Namen ein, um den Kurs "${courseName}" zu buchen:`);
+            if (userName) {
+                alert(`Vielen Dank, ${userName}! Du hast dich erfolgreich für den Kurs "${courseName}" eingetragen.`);
+                // Optional: Hier kannst du einen API-Aufruf einfügen, um die Buchung zu speichern
+            } else {
+                alert("Die Buchung wurde abgebrochen.");
+            }
+        }
+    </script>
+</body>
+</html>

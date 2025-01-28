@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmelden</title>
+    <link rel="stylesheet" href="styles_login.css">
+</head>
+<body onload="checkLoginStatus()">
+    <script>
+        function checkLoginStatus() {
+            if (localStorage.getItem("token")) {
+                // Benutzer ist bereits eingeloggt, leite zu einer anderen Seite weiter
+                window.location.href = "dashboard.html"; // oder eine andere Seite deiner Wahl
+            }
+        }
+    </script>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="logo.png" alt="FITHUB Logo" class="login-logo">
+            <h2>Anmelden</h2>
+            <p>Gib deine E-Mail und Passwort ein, um dich anzumelden.</p>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="E-Mail" required>
+                <input type="password" id="loginPassword" placeholder="Passwort" required>
+                <button type="button" onclick="login()">Anmelden</button>
+            </form>
+            <p class="register-link">
+                Noch kein Account? <a href="register.html">Hier Mitglied werden: Registrierung</a>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

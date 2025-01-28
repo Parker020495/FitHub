@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container für das Formular */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.register-box {
+    background-color: #333; /* Dunkler Hintergrund */
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Logo */
+.register-logo {
+    width: 150px; /* Reduziere die Breite */
+    height: 150px; /* Reduziere die Höhe */
+    object-fit: cover; /* Bild wird innerhalb der Box zugeschnitten */
+    border-radius: 10px; /* Optionale abgerundete Ecken */
+}
+
+
+/* Titel und Beschreibung */
+.register-box h2 {
+    color: #FFA500; /* Orange als Akzentfarbe */
+    margin-bottom: 10px;
+}
+
+.register-box p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Eingabefelder */
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444; /* Dunkelgrau */
+    color: #fff;
+}
+
+/* Platzhalter Farbe */
+input::placeholder {
+    color: #ccc; /* Helleres Grau für Platzhalter */
+}
+
+/* Dropdown Labels */
+.dropdown-label {
+    display: block;
+    text-align: left;
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Dropdown-Menüs */
+select {
+    appearance: none; /* Entfernt Standard-Stile */
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Registrieren-Button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFA500; /* Orange als Akzentfarbe */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e69500; /* Etwas dunkleres Orange beim Hover */
+}
+
+/* Link zum Anmelden */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.login-link a {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

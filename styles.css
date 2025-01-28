@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Seitenhintergrund*/
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg'); /* Lokales Bild oder URL */
+    background-size: cover; /* Deckt den gesamten Bildschirm ab */
+    background-position: center; /* Zentriert das Bild */
+    background-repeat: no-repeat; /* Verhindert die Wiederholung des Bildes */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Header-Stile */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+/* Linker Bereich im Header */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Fügt Abstand zwischen Logo und Navigation hinzu */
+}
+
+.logo {
+    width: auto;
+    height: 60px;
+    margin-right: 10px; /* Erhöht den Abstand zum ersten Navigationspunkt */
+}
+
+/* Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/*
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ddd;
+}
+    */
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-links li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: orange;
+        transition: width 0.3s ease;
+    }
+    
+    .nav-links li a:hover::after {
+        width: 100%; /* Unterstreichung fährt von links nach rechts */
+    }
+    
+    .nav-links li a:hover {
+        color: #FFD700; /* Textfarbe beim Hover */
+    }
+
+/* Header-Rechts für Registrieren / Anmelden Button */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Header-Button für Registrieren / Anmelden */
+.header-button {
+    padding: 8px 16px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header-button:hover {
+    background-color: #FF8C00;
+}
+   
+h1 {
+    font-size: 36px;
+    color: #333;
+    
+}
+
+/* Textfeld im Container */
+.welcome-box {
+    background-color: #333; /* Weißer Hintergrund mit Transparenz */
+    padding: 20px 40px; /* Innenabstand */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+    text-align: center;
+    display: inline-block; /* Passt die Box-Breite an den Inhalt an */
+}
+
+.welcome-box h1 {
+    margin: 0;
+    font-size: 36px;
+    color: white;
+}

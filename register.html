@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrieren</title>
+    <link rel="stylesheet" href="styles_register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <img src="logo.jpg" alt="FITHUB Logo" class="register-logo">
+            <h2>Registrieren</h2>
+            <p>Erstelle ein Konto, um Zugang zu allen Funktionen zu erhalten.</p>
+
+            <!-- Registrierungsformular -->
+            <form id="registerForm">
+                <div class="name-fields">
+                    <input type="text" id="firstName" placeholder="Vorname" required>
+                    <input type="text" id="lastName" placeholder="Nachname" required>
+                </div>
+                <input type="email" id="regEmail" placeholder="E-Mail" required>
+                <input type="password" id="regPassword" placeholder="Passwort" required>
+                <input type="password" id="confirmPassword" placeholder="Passwort bestätigen" required>
+                
+                <form action="http://127.0.0.1:3000/register" method="POST">
+                  </form>
+                  
+                <!-- Dropdown für Grund der Anmeldung -->
+                <label for="reason" class="dropdown-label">Grund für die Anmeldung:</label>
+                <select id="reason" required>no
+                    <option value="">Bitte auswählen</option>
+                    <option value="Abnehmen">Abnehmen</option>
+                    <option value="Muskeln aufbauen">Muskeln aufbauen</option>
+                    <option value="Gesund leben">Gesund leben</option>
+                    <option value="Fit bleiben">Fit bleiben</option>
+                </select>
+
+                <!-- Dropdown für Wie haben Sie von uns erfahren -->
+                <label for="referral" class="dropdown-label">Wie haben Sie von uns erfahren?</label>
+                <select id="referral" required>
+                    <option value="">Bitte auswählen</option>
+                    <option value="Freunde">Von Freunden empfohlen</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Werbekampagne">Werbekampagne</option>
+                </select>
+
+                <!-- Registrieren-Button -->
+                <button type="submit">Registrieren</button>
+            </form>
+
+            <!-- Erfolgsmeldung -->
+            <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+                <h2>Registrierung erfolgreich!</h2>
+                <p>Du bist jetzt ein offizielles Mitglied des FitHub Teams!</p>
+                <p><a href="index.html" class="home-link" style="text-decoration: none; color: #ffa500; font-weight: bold;">Kehre nun zur Homepage zurück</a></p>
+            </div>
+
+            <!-- Lade-Feedback -->
+            <div id="loadingMessage" style="display: none; text-align: center; margin-top: 20px;">
+                <p>Deine Registrierung wird verarbeitet...</p>
+            </div>
+
+            <p class="login-link">
+                Haben Sie bereits ein Konto? <a href="login.html">Hier anmelden</a>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
